@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Furniture Planner</title>
+  <title>Roomy</title>
   <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 </head>
+
 <body>
   <a-scene menu-handler xr-mode-ui="enabled: true; XRMode: ar">
-    <!-- Ground (spawnable) -->
-    <a-plane class="spawnable" position="0 0 0" rotation="-90 0 0" width="5" height="5"></a-plane>
+    <!-- Ground -->
+    <a-plane class="spawnable" position="0 0 0" rotation="-90 0 0" width="4" height="4"
+      material="opacity: 0; transparent: true"></a-plane>
 
     <!-- Camera -->
     <a-camera></a-camera>
@@ -28,165 +31,174 @@
     <!-- Controllers -->
     <a-entity id="leftHand" oculus-touch-controls="hand: left"></a-entity>
     <a-entity id="rightHand" oculus-touch-controls="hand: right" laser-controls
-              raycaster="objects: .menuButton, .spawnable; showLine: true"></a-entity>
+      raycaster="objects: .menuButton, .spawnable; showLine: true"></a-entity>
 
     <!-- Menu -->
     <a-entity id="menu" visible="false" position="0.25 1.35 -0.5" scale="0.5 0.5 0.5">
-      <!-- Example: Chair button -->
+
       <a-entity class="menuButtonWrapper" position="0 0.18 0">
         <a-plane id="btnChair" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnChair" value="Chair" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnChair" value="Chair" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 0.12 0">
         <a-plane id="btnCeilingLightFlower" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnCeilingLightFlower" value="Ceiling Light (Flower)" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnCeilingLightFlower" value="Ceiling Light (Flower)" color="#fff" align="center"
+          position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 0.06 0">
         <a-plane id="btnCeilingLightRect" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnCeilingLightRect" value="Ceiling Light (Rect)" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnCeilingLightRect" value="Ceiling Light (Rect)" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 0 0">
         <a-plane id="btnPottedPlantWhite" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnPottedPlantWhite" value="Potted Plant (White)" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnPottedPlantWhite" value="Potted Plant (White)" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 -0.06 0">
         <a-plane id="btnPottedPlantClay" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnPottedPlantClay" value="Potted Plant (Clay)" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnPottedPlantClay" value="Potted Plant (Clay)" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 -0.12 0">
         <a-plane id="btnSideTable" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnSideTable" value="Side Table" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnSideTable" value="Side Table" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 -0.18 0">
         <a-plane id="btnSofa" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnSofa" value="Sofa" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnSofa" value="Sofa" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
 
       <a-entity class="menuButtonWrapper" position="0 -0.24 0">
         <a-plane id="btnBookshelf" class="menuButton" height="0.04" color="#2c3e50" hover-highlight></a-plane>
-        <a-text id="txtBtnBookshelf" value="Bookshelf" color="#fff" align="center" position="0 0 0.01" scale="0.25 0.25 0.25"></a-text>
+        <a-text id="txtBtnBookshelf" value="Bookshelf" color="#fff" align="center" position="0 0 0.01"
+          scale="0.25 0.25 0.25"></a-text>
       </a-entity>
     </a-entity>
   </a-scene>
 
   <script>
-  // Hover highlight component
-  AFRAME.registerComponent("hover-highlight", {
-    schema: {
-      defaultColor: {type:"color", default:"#2c3e50"},
-      hoverColor: {type:"color", default:"#4CC3D9"},
-      selectedColor: {type:"color", default:"#00BCD4"}
-    },
-    init: function () {
-      this.hovered = false;
-      this.selected = false;
-      const el = this.el;
-      el.setAttribute("color", this.data.defaultColor);
+    // Hover highlight component
+    AFRAME.registerComponent("hover-highlight", {
+      schema: {
+        defaultColor: { type: "color", default: "#2c3e50" },
+        hoverColor: { type: "color", default: "#4CC3D9" },
+        selectedColor: { type: "color", default: "#00BCD4" }
+      },
+      init: function () {
+        this.hovered = false;
+        this.selected = false;
+        const el = this.el;
+        el.setAttribute("color", this.data.defaultColor);
 
-      el.addEventListener("mouseenter", () => { this.hovered = true; this.updateColor(); });
-      el.addEventListener("mouseleave", () => { this.hovered = false; this.updateColor(); });
-    },
-    updateSelection: function (isSelected) { this.selected = isSelected; this.updateColor(); },
-    updateColor: function () {
-      if (this.selected) this.el.setAttribute("color", this.data.selectedColor);
-      else if (this.hovered) this.el.setAttribute("color", this.data.hoverColor);
-      else this.el.setAttribute("color", this.data.defaultColor);
-    },
-    isHovered: function () { return this.hovered; }
-  });
+        el.addEventListener("mouseenter", () => { this.hovered = true; this.updateColor(); });
+        el.addEventListener("mouseleave", () => { this.hovered = false; this.updateColor(); });
+      },
+      updateSelection: function (isSelected) { this.selected = isSelected; this.updateColor(); },
+      updateColor: function () {
+        if (this.selected) this.el.setAttribute("color", this.data.selectedColor);
+        else if (this.hovered) this.el.setAttribute("color", this.data.hoverColor);
+        else this.el.setAttribute("color", this.data.defaultColor);
+      },
+      isHovered: function () { return this.hovered; }
+    });
 
-  // Menu handler
-  AFRAME.registerComponent("menu-handler", {
-    init: function () {
-      const scene = this.el.sceneEl;
-      const rightHand = document.getElementById("rightHand");
-      const menu = document.getElementById("menu");
+    // Menu handler
+    AFRAME.registerComponent("menu-handler", {
+      init: function () {
+        const scene = this.el.sceneEl;
+        const rightHand = document.getElementById("rightHand");
+        const menu = document.getElementById("menu");
 
-      const buttons = {
-        btnChair: "chairModel",
-        btnCeilingLightFlower: "ceilingLightFlowerModel",
-        btnCeilingLightRect: "ceilingLightRectModel",
-        btnPottedPlantWhite: "pottedPlantWhiteModel",
-        btnPottedPlantClay: "pottedPlantClayModel",
-        btnSideTable: "sideTableModel",
-        btnSofa: "sofaModel",
-        btnBookshelf: "bookshelfModel"
-      };
+        const buttons = {
+          btnChair: "chairModel",
+          btnCeilingLightFlower: "ceilingLightFlowerModel",
+          btnCeilingLightRect: "ceilingLightRectModel",
+          btnPottedPlantWhite: "pottedPlantWhiteModel",
+          btnPottedPlantClay: "pottedPlantClayModel",
+          btnSideTable: "sideTableModel",
+          btnSofa: "sofaModel",
+          btnBookshelf: "bookshelfModel"
+        };
 
-      let selectedModelId = "chairModel";
-      let menuToggleCooldown = false;
+        let selectedModelId = "chairModel";
+        let menuToggleCooldown = false;
 
-      scene.addEventListener("loaded", () => {
-        // Fit planes to text width
-        Object.keys(buttons).forEach((btnId) => {
-          const plane = document.getElementById(btnId);
-          const text = document.getElementById("txt" + btnId.charAt(0).toUpperCase() + btnId.slice(1));
-          if (!plane || !text) return;
-          text.addEventListener("componentinitialized", (e) => {
-            if (e.detail.name === "text") {
-              const bbox = text.object3DMap.text.geometry.boundingBox;
-              if (bbox) plane.setAttribute("width", bbox.max.x - bbox.min.x + 0.02);
-            }
+        scene.addEventListener("loaded", () => {
+          // Fit planes to text width
+          Object.keys(buttons).forEach((btnId) => {
+            const plane = document.getElementById(btnId);
+            const text = document.getElementById("txt" + btnId.charAt(0).toUpperCase() + btnId.slice(1));
+            if (!plane || !text) return;
+            text.addEventListener("componentinitialized", (e) => {
+              if (e.detail.name === "text") {
+                const bbox = text.object3DMap.text.geometry.boundingBox;
+                if (bbox) plane.setAttribute("width", bbox.max.x - bbox.min.x + 0.02);
+              }
+            });
           });
+
+          // Default selection to be arm chair
+          const defaultBtn = document.getElementById("btnChair");
+          if (defaultBtn && defaultBtn.components["hover-highlight"]) defaultBtn.components["hover-highlight"].updateSelection(true);
         });
 
-        // Default selection
-        const defaultBtn = document.getElementById("btnChair");
-        if (defaultBtn && defaultBtn.components["hover-highlight"]) defaultBtn.components["hover-highlight"].updateSelection(true);
-      });
-
-      // Toggle menu with B button
-      rightHand.addEventListener("bbuttondown", () => {
-        if (menuToggleCooldown) return;
-        menu.setAttribute("visible", !menu.getAttribute("visible"));
-        menuToggleCooldown = true;
-        setTimeout(() => (menuToggleCooldown = false), 300);
-      });
-
-      // Select button with A button
-      rightHand.addEventListener("abuttondown", () => {
-        let hoveredBtnId = null;
-        Object.keys(buttons).forEach((btnId) => {
-          const btn = document.getElementById(btnId);
-          if (btn && btn.components["hover-highlight"]?.isHovered()) hoveredBtnId = btnId;
-        });
-        if (!hoveredBtnId) return;
-
-        selectedModelId = buttons[hoveredBtnId];
-
-        // Update highlights
-        Object.keys(buttons).forEach((id) => {
-          const btn = document.getElementById(id);
-          if (btn && btn.components["hover-highlight"]) btn.components["hover-highlight"].updateSelection(id === hoveredBtnId);
+        // Toggle menu with B button
+        rightHand.addEventListener("bbuttondown", () => {
+          if (menuToggleCooldown) return;
+          menu.setAttribute("visible", !menu.getAttribute("visible"));
+          menuToggleCooldown = true;
+          setTimeout(() => (menuToggleCooldown = false), 300);
         });
 
-        menu.setAttribute("visible", false);
-        console.log("Selected model via A button:", selectedModelId);
-      });
+        // Select menu with A button
+        rightHand.addEventListener("abuttondown", () => {
+          let hoveredBtnId = null;
+          Object.keys(buttons).forEach((btnId) => {
+            const btn = document.getElementById(btnId);
+            if (btn && btn.components["hover-highlight"]?.isHovered()) hoveredBtnId = btnId;
+          });
+          if (!hoveredBtnId) return;
 
-      // Spawn model on ground plane
-      rightHand.addEventListener("click", (event) => {
-        const intersection = event.detail.intersection;
-        if (!intersection) return;
-        const pos = intersection.point;
-        const model = document.createElement("a-entity");
-        model.setAttribute("position", `${pos.x} ${pos.y} ${pos.z}`);
-        model.setAttribute("gltf-model", `#${selectedModelId}`);
-        model.setAttribute("scale", "0.1 0.1 0.1");
-        scene.appendChild(model);
-        model.addEventListener("model-loaded", () => {
-          model.setAttribute("animation", {property:"scale", to:"1 1 1", easing:"easeOutElastic", dur:800});
+          selectedModelId = buttons[hoveredBtnId];
+
+          // Update hover highlights
+          Object.keys(buttons).forEach((id) => {
+            const btn = document.getElementById(id);
+            if (btn && btn.components["hover-highlight"]) btn.components["hover-highlight"].updateSelection(id === hoveredBtnId);
+          });
+
+          menu.setAttribute("visible", false);
+          // console.log("Selected model via A button:", selectedModelId);
         });
-        console.log(`Spawned model: ${selectedModelId} at ${pos.x}, ${pos.y}, ${pos.z}`);
-      });
-    }
-  });
+
+        // Spawn model on ground plane
+        rightHand.addEventListener("click", (event) => {
+          const intersection = event.detail.intersection;
+          if (!intersection) return;
+          const pos = intersection.point;
+          const model = document.createElement("a-entity");
+          model.setAttribute("position", `${pos.x} ${pos.y} ${pos.z}`);
+          model.setAttribute("gltf-model", `#${selectedModelId}`);
+          model.setAttribute("scale", "0.1 0.1 0.1");
+          scene.appendChild(model);
+          model.addEventListener("model-loaded", () => {
+            model.setAttribute("animation", { property: "scale", to: "1 1 1", easing: "easeOutElastic", dur: 800 });
+          });
+          // console.log(`Spawned model: ${selectedModelId} at ${pos.x}, ${pos.y}, ${pos.z}`);
+        });
+      }
+    });
   </script>
 </body>
+
 </html>

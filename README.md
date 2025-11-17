@@ -15,9 +15,6 @@ Inspired by IKEA Kreativ, which allows users to plan the furniture for their spa
 * Manipulating objects' textures and colors, without having to change it in code.
 * Outdoor version for gardens/backyard planning.
 
-### Demo Video
-
-
 
 
 ### Appendix
